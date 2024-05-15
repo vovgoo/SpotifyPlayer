@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+        
+</head>
+
+<body>
+    <audio src="test.mp3" id="audio"></audio>
+
+    <div class="w-full h-screen overflow-hidden flex justify-center items-center">
+        <div class="absolute h-full w-full overflow-hidden z-0">
+            <div class="absolute h-full w-full bg-black opacity-60 z-10"></div>
+            <img class="h-full w-full object-cover z-0"
+                src="https://i.scdn.co/image/ab676186000010166aae2df51410b4e27412fa67">
+        </div>
+
+        <div class="absolute w-11/12 h-full flex flex-col z-10 max-xl:justify-center max-xl:items-center">
+            <div class="h-1/6 flex justify-center items-center">
+                <p class="text-3xl w-full ubuntu-medium text-white opacity-70">vovgoo dev.</p>
+            </div>
+
+            <div class="h-5/6 flex flex-col justify-end max-xl:justify-between">
+                <div class="flex mb-12 max-xl:flex-col max-xl:justify-center max-xl:items-center">
+                    <div class="h-track w-track max-sm:h-track-sm max-sm:w-track-sm">
+                        <img class="object-cover rounded-md" src="main.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col justify-end w-main-name ml-20 max-xl:ml-0 max-xl:w-auto   ">
+                        <p class="text-6xl w-full ubuntu-medium text-white mb-5 leading-main-name max-xl:text-center max-xl:text-4xl max-xl:mt-12 max-xl:w-full max-sm:text-2xl">Твоей подружки номер - Lida x СКОРОСТЬ</p>
+                        <p class="text-3xl w-full ubuntu-medium text-white opacity-70 max-xl:text-center max-xl:text-3xl max-sm:text-2xl">Фрио</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center mb-12">
+                    <div class="flex w-full items-center justify-center mb-6">
+                        <div class="w-auto text-xl ubuntu-medium text-white mr-5 max-sm:text-lg" id="time-start">
+                            0:00
+                        </div>
+                        <div class="relative w-full flex items-center">
+                            <input class="w-full" type="range" value="0" id="range-outer">
+                            <div class="absolute bg-white h-pointer w-pointer cursor-pointer rounded-full pointer-events-none z-20 opacity-0" id="range-pointer"></div>
+                            <div class="absolute h-range pointer-events-none bg-white" id="range-background"></div>
+                        </div>
+                        <div class="w-auto text-xl ubuntu-medium text-white ml-5 text-right max-sm:text-lg" id="time-end">
+                            0:00
+                        </div>
+                    </div>
+
+                    <div class="flex w-full items-center justify-center">
+                        <div class="w-1/4">
+
+                        </div>
+                        <div class="w-2/4 flex justify-center items-center">
+                            <i class="fa-solid fa-shuffle text-gray-300 text-3xl cursor-pointer mr-10 hover:text-pink-200 transition-all duration-300 max-sm:text-2xl" id="shafle"></i>
+                            <i class="fa-solid fa-backward-step text-gray-300 text-3xl cursor-pointer hover:text-pink-200 transition-all duration-300 max-sm:text-2xl" id="previos"></i>
+                            <i class="fa-solid fa-circle-play text-white text-6xl cursor-pointer mr-10 ml-10 hover:text-pink-200 transition-all duration-300 max-sm:text-4xl" id="playButton"></i>
+                            <i class="fa-solid fa-forward-step text-gray-300 text-3xl cursor-pointer hover:text-pink-200 transition-all duration-300 max-sm:text-2xl" id="next"></i>
+                            <i class="fa-solid fa-repeat text-gray-300 text-3xl cursor-pointer ml-10 hover:text-pink-200 transition-all duration-300 max-sm:text-2xl" id="replay"></i>
+                        </div>
+                        <div class="w-1/4 flex items-center justify-end">
+                            <i class="fa-solid fa-volume-low text-gray-300 text-xl mr-5 max-sm:hidden" id="volume-icon"></i>
+                            <div class="relative w-1/4 flex items-center max-sm:hidden">
+                                <input class="w-full" type="range" value="50" id="range-outer-volume">
+                                <div class="absolute bg-white h-pointer w-pointer cursor-pointer rounded-full pointer-events-none z-20 opacity-0" id="range-pointer-volume"></div>
+                                <div class="absolute h-range pointer-events-none bg-white" id="range-background-volume"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
